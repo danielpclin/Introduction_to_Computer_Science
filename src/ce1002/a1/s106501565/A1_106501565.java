@@ -4,6 +4,8 @@
  * Name: 林柏臣
  * Student ID: 106501565
  */
+package ce1002.a1.s106501565;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
