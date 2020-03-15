@@ -1,0 +1,5 @@
+# Ignore jetbrain files
+/.rakeTasks
+/.generators
+/.idea/
+/*.iml
