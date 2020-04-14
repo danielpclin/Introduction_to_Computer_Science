@@ -19,15 +19,8 @@ public class A4_106501565 {
         for (int i = 0; i < N; i++) {
             String str = scanner.next();
             for (int j = 0; j < N; j++) {
-                if(str.charAt(j) == '*')
+                if(str.charAt(j) == '*') {
                     map[i][j] = -1;
-                else
-                    map[i][j] = 0;
-            }
-        }
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                if(map[i][j] == -1) {
                     for (int k = -1; k <= 1; k++) {
                         for (int l = -1; l <= 1; l++) {
                             if (i + k < 0 || i + k >= N || j + l < 0 || j + l >= N)
