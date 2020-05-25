@@ -35,19 +35,29 @@ public class A8_106501565 {
                 continue;
             }
             char chr = matrix[x][y];
-            while (check) {
-                radius++;
-                for (int i = x - radius; i <= x + radius; i += 2 * radius){
-                    if (!check) break;
-                    for (int j = y - radius; j <= y + radius; j += 2 * radius){
+            while (true) {
+                int i = x - radius - 1, j = y - radius - 1;
+                for (int k = 0; k < 4; k++) {
+                    for (int l = 0; l < (radius+1) * 2; l++) {
+                        if (k == 0)
+                            i++;
+                        else if (k==1)
+                            j++;
+                        else if (k==2)
+                            i--;
+                        else
+                            j--;
                         if (i < 0 || j < 0 || i >= M || j >= N || matrix[i][j] != chr){
                             check = false;
                             break;
                         }
                     }
+                    if (!check) break;
                 }
+                if (!check) break;
+                radius++;
             }
-            System.out.println(2 * radius - 1);
+            System.out.println(2 * radius + 1);
         }
     }
 }
